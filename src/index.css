@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.header-site{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 10px;
+  background-color: bisque;
+}
+.apresentacao-nome{text-align: right;}
+.imputName{width: 200px !important; float: right; margin-right: 10px;}
+.alinhamento{float: right; }
+.infos{margin-top: 15px; margin-bottom:15px !important;}

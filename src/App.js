@@ -1,25 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useContext} from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import './index.css';
+
+import Header from './Header';
+import NewComment from './NewComment';
+import Comments from './Comments';
+import CreateUser from './CreateUser';
+import UserInfo from './UserInfo';
+import SignInUser from './SignInUser'
+import {Container, ListGroup} from 'react-bootstrap';
+
+import {AuthProvider} from './auth';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthProvider>
+      <Header />
+      <Container>
+        <CreateUser />
+        <SignInUser />
+        <ListGroup variant="flush">
+          <Comments />
+        </ListGroup>
+        <UserInfo />
+        <NewComment />
+      </Container>
+    </AuthProvider>
   );
 }
 
